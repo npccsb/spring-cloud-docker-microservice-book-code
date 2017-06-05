@@ -3,7 +3,7 @@ spring:
     config:
       server:
         git:
-          uri: http://git.oschina.net/itmuch/spring-cloud-config-repo
+          uri: http://git.oschina.net/npccsb/spring-cloud-config-repo
           search-paths: foo,bar*
 logging:
   level:

@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://git.oschina.net/itmuch/{application}
+          uri: https://git.oschina.net/npccsb/{application}
           username:                                                         # Git仓库的账号
           password:                                                         # Git仓库的密码
 logging:
