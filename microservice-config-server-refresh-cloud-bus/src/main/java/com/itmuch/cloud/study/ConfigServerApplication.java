@@ -7,8 +7,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 /**
  * 基于SpringCloudBus的ConfigServer刷新机制的服务器端
  * @description
- * 根据“根”上下文优先加载原则，resources下的bootstrap.yml会比application.yml中的内容提前加载
+ * 1.根据“根”上下文优先加载原则，resources下的bootstrap.yml会比application.yml中的内容提前加载
  * 所以，需要将config server地址放入在bootstrap.yml中实现提前加载
+ * 2.本例采用rabbitmq(也可以是kafka，但需要修改pom依赖从amqp到kafka)来实现cloud bus，
+ * rabbitmq直接pull自docker.io提供的官方rabbitmq镜像。
  *  
  * @author Spring Cao
  * @date 2017年6月5日 上午8:50:31
