@@ -23,6 +23,7 @@ public class MovieController {
   }
 
   public User findByIdFallback(Long id, Throwable throwable) {
+    System.out.println("Hystrix !!!");
     User user = new User();
     user.setId(-1L);
     user.setName("the default user");

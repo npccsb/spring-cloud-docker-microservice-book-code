@@ -12,6 +12,7 @@ public class UserService {
     private RestTemplate restTemplate;
 
     public User findById(Long id) {
-        throw new HystrixBadRequestException("business exception happens.", new Exception(""));
+        //抛出HystrixBadRequestException时可以要求Hystrix忽略对此异常的回滚
+        throw new HystrixBadRequestException("business exception happens.", new Exception("模拟db异常"));
     }
 }
